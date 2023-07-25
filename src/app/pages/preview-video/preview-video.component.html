@@ -1,0 +1,70 @@
+<div class="w-full ">
+    <!-- VIDEO -->
+    <div class="w-full flex flex-col">
+        <div class="flex flex-row w-full py-2 items-center">
+            <p class="w-full text-md text-cream font-semibold">{{title}}</p>
+            <p class="w-full text-xs text-cream">{{option}}</p>
+        </div>
+        <div class="flex flex-row w-full h-auto space-x-1">
+            <div class="w-3/5 relative">
+                <img class="w-full h-full object-cover" [src]="selectedUser.length === 0 ? content[0].Images[0] :selectedUser[0].Images[0]">
+                <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                    <p class="text-cream text-md font-semibold">{{selectedUser.length === 0 ? content[0].Title : selectedUser[0].Title}}</p>
+                    <div class="w-full flex flex-row items-center justify-between">
+                        <p class="text-cream text-xs">Benni Setiady</p>
+                        <p class="text-cream text-xs">10000 View</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-2/5 space-y-1">
+                <div class="w-full relative" (click)="selectedUserPic(0)">
+                    <img class="w-full" [src]="content[0].Images[0]">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-cream text-xs">{{content[0].Director}}</p>
+                            <p class="text-cream text-xs">{{content[0].imdbVotes}} View</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full relative"  (click)="selectedUserPic(1)">
+                    <img class="w-full h-full object-cover" [src]="content[1].Images[0]">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-cream text-xs">{{content[1].Director}}</p>
+                            <p class="text-cream text-xs">{{content[1].imdbVotes}} View</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-1 mt-1">
+            <div class="col-span-1 bg-cream relative"  (click)="selectedUserPic(2)">
+                <img class="w-full h-full object-cover" [src]="content[2].Images[0]">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-cream text-xs">{{content[2].Director}}</p>
+                            <p class="text-cream text-xs">{{content[2].imdbVotes}} View</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-span-1 bg-cream relative"  (click)="selectedUserPic(3)">
+                <img class="w-full h-full object-cover" [src]="content[3].Images[0]">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-cream text-xs">{{content[3].Director}}</p>
+                            <p class="text-cream text-xs">{{content[3].imdbVotes}} View</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-span-1 border-2 border-cream flex flex-row items-center justify-center space-x-2 px-4">
+                <div class="flex items-center justify-center ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p class="text-md text-cream break-normal font-semibold">{{uploadTitle}}</p>
+                  
+            </div>
+        </div>
+    </div>
+</div>

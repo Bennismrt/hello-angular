@@ -1,0 +1,10 @@
+<div class="flex flex-row  w-full space-x-2">
+    <p class="text-cream">Videos</p>
+    <ng-container *ngIf="arrBreadcrumb.length > 0">
+        <span class="font-semibold text-cream">/</span>
+        <ng-container *ngFor="let item of arrBreadcrumb; let last = last">
+            <a class="text-cream" href="">{{item.name}}</a>
+            <span *ngIf="!last" class="font-semibold text-cream">/</span>
+        </ng-container>
+    </ng-container>
+</div>

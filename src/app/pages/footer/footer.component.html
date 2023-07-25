@@ -1,0 +1,30 @@
+<div class="w-full flex flex-col space-y-4">
+    <div class="flex flex-row items-center space-x-2">
+        <div class="bg-cream">
+            <img class="w-8 h-8 p-2" src="https://img.icons8.com/?size=512&id=437&format=png" alt="">
+        </div>
+        <div class="bg-cream">
+            <img class="w-8 h-8 p-2" src="https://img.icons8.com/?size=512&id=447&format=png" alt="">
+        </div>
+        <div class="bg-cream">
+            <img class="w-8 h-8 p-2" src="https://img.icons8.com/?size=512&id=435&format=png" alt="">
+        </div>
+    </div>
+
+    <div class="w-full flex flex-row space-x-2">
+        <ng-container *ngFor="let item of ['About', 'For Businnes', 'Suggestion', 'Help & FAQ', 'Contact', 'Pricing'] let last = last">
+            <a class="text-xs text-cream font-semibold" href="">{{item}}</a>
+            <p *ngIf="!last" class="text-xs text-cream font-semibold">/</p>
+        </ng-container>
+    </div>
+
+    <div class="flex flex-col">
+        <p class="text-xs text-cream font-semibold">Copyright © 2023 hello world.</p>
+        <div class="flex flex-row space-x-2">
+            <ng-container *ngFor="let item of ['Privacy', 'Terms'] let last = last">
+                <a class="text-xs text-cream font-semibold" href="">{{item}}</a>
+                <p *ngIf="!last" class="text-xs text-cream font-semibold">/</p>
+            </ng-container>
+        </div>
+    </div>
+</div>

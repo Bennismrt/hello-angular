@@ -1,0 +1,80 @@
+<div class="w-full">
+    <!-- VIDEO -->
+    <div class="w-full flex flex-col">
+        <div class="flex flex-row w-full py-2 items-center">
+            <p class="w-full text-md text-cream font-semibold">{{title}}</p>
+            <p class="w-full cursor-pointer text-xs text-cream">{{option}}</p>
+        </div>
+        <div class="flex flex-row w-full h-auto space-x-1">
+            <div class="w-3/5 h-56 relative">
+                <div class="w-full h-56 bg-cream">
+                    <img class="w-full h-full object-cover opacity-50" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/HTML_Image_Tag.jpg" alt="">
+                </div>
+                <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                    <p class="text-red-peach font-semibold text-md font-semibold">{{selectedUser.length == 0 ? content[0]?.title! : selectedUser[0]?.title!}}</p>
+                    <div class="w-full flex flex-row items-center justify-between">
+                        <p class="text-red-peach font-semibold text-xs">Jhon Doe {{selectedUser.length == 0 ? content[0]?.userId : selectedUser[0]?.userId}}</p>
+                        <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-2/5 space-y-1">
+                <div class="w-full relative bg-cream cursor-pointer" (click)="selectedUserPic(0)">
+                    <div class="w-full object-cover">
+                        <img class="w-full h-full object-cover opacity-50" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/what-is-html-3.webp" alt="">
+                    </div>
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[0]?.title}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full relative bg-cream cursor-pointer" (click)="selectedUserPic(1)">
+                    <div class="w-full object-cover">
+                        <img class="w-full h-full object-cover opacity-50" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/what-is-html-3.webp" alt="">
+                    </div>
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[1]?.title}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-1 mt-1">
+            <div class="col-span-1 bg-cream relative bg-cream cursor-pointer" (click)="selectedUserPic(2)">
+                <div class="w-full h-28 object-cover">
+                    <img class="w-full h-full object-cover opacity-50" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/what-is-html-3.webp" alt="">
+                </div>
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[2]?.title}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-span-1 bg-cream relative bg-cream cursor-pointer" (click)="selectedUserPic(3)">
+                <div class="w-full h-28 object-cover">
+                    <img class="w-full h-full object-cover opacity-50" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/what-is-html-3.webp" alt="">
+                </div>
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[3]?.title}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-span-1 border-2 border-cream flex flex-row items-center justify-center space-x-2 px-4 cursor-pointer">
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>   
+                </div>
+                <p class="text-md text-cream break-normal font-semibold">{{uploadTitle}}</p>
+                  
+            </div>
+        </div>
+    </div>
+</div>

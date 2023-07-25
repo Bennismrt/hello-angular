@@ -1,0 +1,71 @@
+<div class="w-full">
+    <!-- VIDEO -->
+    <div class="w-full flex flex-col">
+        <div class="flex flex-row w-full py-2 items-center">
+            <p class="w-full text-md text-cream font-semibold">{{title}}</p>
+            <p class="w-full cursor-pointer text-xs text-cream">{{option}}</p>
+        </div>
+        <div class="flex flex-row w-full h-auto space-x-1">
+            <div class="w-3/5 relative bg-cream">
+                <img class="w-full h-full object-cover" [src]="selectedUser.length == 0 ? content[0]?.image! : selectedUser[0]?.image!" alt="">
+                <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                    <p class="text-red-peach font-semibold text-md font-semibold">{{selectedUser.length == 0 ? content[0]?.university! : selectedUser[0]?.university!}}</p>
+                    <div class="w-full flex flex-row items-center justify-between">
+                        <p class="text-red-peach font-semibold text-xs">{{selectedUser.length == 0 ? content[0]?.firstName : selectedUser[0]?.firstName}} {{selectedUser.length == 0 ? content[0]?.lastName : selectedUser[0]?.lastName}}</p>
+                        <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-2/5 space-y-1">
+                <div class="w-full relative bg-cream cursor-pointer" (click)="selectedUserPic(0)">
+                    <img class="w-full h-full object-cover" [src]="content[0]?.image!" alt="">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[0]?.firstName}} {{content[0]?.lastName}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full relative bg-cream cursor-pointer" (click)="selectedUserPic(1)">
+                    <img class="w-full h-full object-cover" [src]="content[1]?.image!" alt="">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[1]?.firstName}} {{content[1]?.lastName}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-1 mt-1">
+            <div class="col-span-1 bg-cream relative bg-cream cursor-pointer" (click)="selectedUserPic(2)">
+                <img class="w-full h-full object-cover" [src]="content[2]?.image!" alt="">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[2]?.firstName}} {{content[2]?.lastName}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-span-1 bg-cream relative bg-cream cursor-pointer" (click)="selectedUserPic(3)">
+                <img class="w-full h-full object-cover" [src]="content[3]?.image!" alt="">
+                    <div class="w-full absolute z-10 inset-x-0 bottom-0 p-2">
+                        <div class="w-full flex flex-row items-center justify-between">
+                            <p class="text-red-peach font-semibold text-xs">{{content[3]?.firstName}} {{content[3]?.lastName}}</p>
+                            <p class="text-red-peach font-semibold text-xs">10000 View</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-span-1 border-2 border-cream flex flex-row items-center justify-center space-x-2 px-4 cursor-pointer">
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z" />
+                    </svg>
+                </div>
+                <p class="text-md text-cream break-normal font-semibold">{{uploadTitle}}</p>
+                  
+            </div>
+        </div>
+    </div>
+</div>
