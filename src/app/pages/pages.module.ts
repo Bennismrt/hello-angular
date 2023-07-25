@@ -5,12 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeadersComponent } from './headers/headers.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { GeneralServices } from 'src/services/movie.services';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { PreviewDocumentComponent } from './preview-document/preview-document.component';
 import { PreviewVideoComponent } from './preview-video/preview-video.component';
 import { PreviewPeopleComponent } from './preview-people/preview-people.component';
+import { GeneralServices } from './general.services';
 
 const routes: Routes = [
     {path: '', component: DashboardComponent},

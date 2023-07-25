@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GeneralServices } from 'src/services/movie.services';
+import { GeneralServices } from '../general.services';
 
 @Component({
   selector: 'app-dashboard',
